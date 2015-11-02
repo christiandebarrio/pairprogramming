@@ -21,7 +21,8 @@ class File
 
 	def div_subtitle_in_elements
 		div_text_in_subtitles.map do |subtitle|
-			subtitle.split("\n")
+			array_subtitle = subtitle.split("\n")
+			hash_subtitle = {id: array_subtitle[0], time: array_subtitle[1], }
 		end
 	end
 
