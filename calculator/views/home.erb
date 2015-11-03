@@ -8,7 +8,7 @@
 
 <h1>Claculator</h1>
 <form action="/" method="POST">
-  <input type="number" name="first_number" placeholder="1st number">
+  <input type="number" name="first_number" placeholder="1st number" value=<%= @next_num %>>
   <input type="number" name="second_number" placeholder="2nd number">
 
   <button type="submit" name="operation" value="add">+</button>
@@ -21,7 +21,11 @@
 </form>
 
 <% if @result %>
-  <p>El resultado es: <%= @result %></p>
+  <p>El resultado es: <%= @print_result %></p>
+
+<form action="/" method="POST">
+  <button type="submit" name="save_file" value=<%= @result %>>Save</button>
+</form>
 <% end %>
 
 </body>

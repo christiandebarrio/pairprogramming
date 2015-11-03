@@ -1,6 +1,6 @@
 class Calculator
   def add first_number, second_number
-    first_number + second_number
+    result = first_number + second_number
   end
 
   def substract first_number, second_number
