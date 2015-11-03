@@ -5,38 +5,22 @@ get "/" do
   erb :home
 end
 
-post "/calculate_add" do
+post "/" do
   first = params[:first_number].to_i
   second = params[:second_number].to_i
+  operation = params[:operation]
 
-  @result = Calculator.new.add(first, second)
-
-  erb :home
-end
-
-post "/calculate_substract" do
-  first = params[:first_number].to_i
-  second = params[:second_number].to_i
-
-  @result = Calculator.new.substract(first, second)
-
-  erb :home
-end
-
-post "/calculate_multiply" do
-  first = params[:first_number].to_i
-  second = params[:second_number].to_i
-
-  @result = Calculator.new.multiply(first, second)
-
-  erb :home
-end
-
-post "/calculate_divide" do
-  first = params[:first_number].to_i
-  second = params[:second_number].to_i
-
-  @result = Calculator.new.divide(first, second)
+  if operation == "add"
+    @result = Calculator.new.add(first, second)
+  elsif operation == "substract"
+    @result = Calculator.new.substract(first, second)
+  elsif operation == "multiply"
+    @result = Calculator.new.multiply(first, second)
+  elsif operation == "divide"
+    @result = Calculator.new.divide(first, second)
+  end
+    
+    
 
   erb :home
 end
