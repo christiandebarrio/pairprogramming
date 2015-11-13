@@ -1,6 +1,0 @@
-source 'https://rubygems.com'
-
-gem 'rspec'
-gem 'pry'
-gem 'sinatra'
-gem 'sinatra-contrib'
