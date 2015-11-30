@@ -13,6 +13,7 @@ function tournamentsIndex () {
 
   function showTournaments (tournaments) {
     var html
+    $tourneySection.empty();
 
     if (tournaments.length === 0) {
       html = buildErrorHtml('Looks like there aren\'t any tournaments yet.')

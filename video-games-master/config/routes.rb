@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   resources :players
   resources :tournaments
-  
+
   get '/' => 'tournaments#index'
   get '/api/tournaments' => 'tournaments#json'
 
   post '/api/tournaments' => 'tournaments#json_create'
+
+  delete '/api/tournaments' => 'tournaments#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
