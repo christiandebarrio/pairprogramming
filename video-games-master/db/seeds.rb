@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+(1..25).each do |index|
+  Player.create name: "Name_#{index}"
+end
+
+(1..5).each do |index|
+  Tournament.create name: "Tournament_#{index}"
+end

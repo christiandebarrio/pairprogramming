@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :players
+  resources :tournaments
   get '/' => 'tournaments#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
